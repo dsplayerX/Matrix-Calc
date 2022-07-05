@@ -1,23 +1,22 @@
 from matrix_calculations import *
 
-
 def menu():
 
     isRunning = True
 
     while isRunning:
-        print("\n1. Add")
-        print("2. Substract")
-        print("3. Multiply by constant")
-        print("4. Divide by constant")
-        print("5. Multiply Matrices")
-        print("6. Transpose")
-        print("7. Determinant")
-        print("8. Inverse")
-        print("-------------")
-        print("?. How to Use")
-        print("-------------")
-        print("q. Quit")
+        print("\n  1. Add")
+        print("  2. Substract")
+        print("  3. Multiply (by a constant)")
+        print("  4. Divide (by a constant)")
+        print("  5. Multiply Matrices")
+        print("  6. Transpose")
+        print("  7. Determinant")
+        print("  8. Inverse")
+        print("-----------------")
+        print("  ?. How to Use")
+        print("-----------------")
+        print("  q. Quit")
 
         option = input("Select option: ").lower()
         
@@ -59,10 +58,10 @@ def menu():
             inverse(inputMtx)
 
         elif option == "?":
-            print("\nWhen entering matrices use spaces to differenciate elements in a row and ';' to differenciate columns")
+            print("\nWhen entering matrices use a <Space> \nto differenciate elements in a row \nand ';' after each row to differenciate rows")
             print("\n\t[[a b c]\n\t [j k l]\n\t [x y z]]")
             print("\nAbove matrix can be entered as an input as,")
-            print("\ta b c; j k l; x y z")
+            print("\n\ta b c; j k l; x y z")
 
         elif option == "q":
             isRunning = False
@@ -70,5 +69,9 @@ def menu():
         else:
             print("Wrong input! Try again!")
 
+
+print("-------------------")
+print(" MATRIX CALCULATOR ")
+print("-------------------")
 
 menu()

@@ -1,6 +1,4 @@
-import re
-from basic_cals import *
-from matrix_cals import *
+from matrix_calculations import *
 
 
 def menu():
@@ -15,49 +13,50 @@ def menu():
         print("5. Multiply Matrices")
         print("6. Transpose")
         print("7. Determinant")
-        print("7. Inverse")
-
+        print("8. Inverse")
+        print("-------------")
         print("?. How to Use")
-
+        print("-------------")
         print("q. Quit")
-
 
         option = input("Select option: ").lower()
         
-        if option == "1":
+        if option == "1": # Addition
             userMtxA = input("Enter first matrix: ")
             userMtxB = input("Enter second matrix: ")
-            result = add(userMtxA, userMtxB)
-            print(result)
-
-        elif option == "2":
+            add(userMtxA, userMtxB)
+            
+        elif option == "2": # Substraction
             userMtxA = input("Enter first matrix: ")
             userMtxB = input("Enter second matrix: ")
-            print(substract(userMtxA, userMtxB))
+            substract(userMtxA, userMtxB)
 
-        elif option == "3":
+        elif option == "3": # Multiplication by constant
             userMtx = input("Enter matrix: ")
             userMultiplier = int(input("Enter multiplier: "))
-            result = multiply(userMtx, userMultiplier)
-            print(result)
+            multiply(userMtx, userMultiplier)
 
-        elif option == "4":
+        elif option == "4": # Division by constant
             userMtx = input("Enter matrix: ")
             userDivisor = int(input("Enter divisor: "))
-            result = divide(userMtx, userDivisor)
-            print(result)
+            divide(userMtx, userDivisor)
 
-        elif option == "5":
+        elif option == "5": # Matrice Multiplication
             userMtxA = input("Enter first matrix: ")
             userMtxB = input("Enter second matrix: ")
-            result = multiply_matrices(userMtxA,userMtxB)
-            print("A.B:\n",result)
+            multiply_matrices(userMtxA,userMtxB)
+            
+        elif option == "6": # Transpose
+            userMtx = input("Enter matrix: ")
+            transpose(userMtx)
 
-        elif option == "6":
-            pass
+        elif option == "7": # Determinant
+            inputMtx = input("Enter matrix: ")
+            determinant(inputMtx)
 
-        elif option == "7":
-            pass
+        elif option == "8": # Inverse
+            inputMtx = input("Enter matrix: ")
+            inverse(inputMtx)
 
         elif option == "?":
             print("\nWhen entering matrices use spaces to differenciate elements in a row and ';' to differenciate columns")
@@ -67,6 +66,9 @@ def menu():
 
         elif option == "q":
             isRunning = False
+        
+        else:
+            print("Wrong input! Try again!")
 
 
 menu()

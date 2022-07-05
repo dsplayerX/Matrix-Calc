@@ -5,7 +5,10 @@ def menu():
     isRunning = True
 
     while isRunning:
-        print("\n  1. Add")
+        print("-------------------")
+        print(" MATRIX CALCULATOR ")
+        print("-------------------")
+        print("  1. Add")
         print("  2. Substract")
         print("  3. Multiply (by a constant)")
         print("  4. Divide (by a constant)")
@@ -13,9 +16,9 @@ def menu():
         print("  6. Transpose")
         print("  7. Determinant")
         print("  8. Inverse")
-        print("-----------------")
+        print("-------------------")
         print("  ?. How to Use")
-        print("-----------------")
+        print("-------------------")
         print("  q. Quit")
 
         option = input("Select option: ").lower()
@@ -69,9 +72,5 @@ def menu():
         else:
             print("Wrong input! Try again!")
 
-
-print("-------------------")
-print(" MATRIX CALCULATOR ")
-print("-------------------")
 
 menu()

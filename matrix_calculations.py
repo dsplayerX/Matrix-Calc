@@ -11,7 +11,7 @@ def add(mtxA, mtxB):
         print("\nA+B: \n", result)
 
     except(ValueError):
-        print("ERROR")
+        print("ERROR: User input is not a matrix.\nSelect '?' in menu to read how to enter a matrix")
 
 
 def substract(mtxA, mtxB):
@@ -24,7 +24,7 @@ def substract(mtxA, mtxB):
         print("\nA-B: \n", result)
 
     except(ValueError):
-        print("ERROR")
+        print("ERROR: User input is not a matrix.\nSelect '?' in menu to read how to enter a matrix")
 
 
 def multiply(mtx, multiplier):
@@ -35,7 +35,7 @@ def multiply(mtx, multiplier):
         print("\nM x", multiplier ,": \n", result)
 
     except(ValueError):
-        print("ERROR")
+        print("ERROR: User input is not a matrix.\nSelect '?' in menu to read how to enter a matrix")
 
 
 def divide(mtx, divisor):
@@ -48,7 +48,7 @@ def divide(mtx, divisor):
         print("\nM /", divisor ,": \n", result)
 
     except(ValueError):
-        print("ERROR")
+        print("ERROR: User input is not a matrix.\nSelect '?' in menu to read how to enter a matrix")
         
 
 def multiply_matrices(mtxA, mtxB):
@@ -61,7 +61,9 @@ def multiply_matrices(mtxA, mtxB):
         print("\nA.B: \n",result)
 
     except(ValueError):
-        print("ERROR")
+        print("ERROR!")
+        print("Could be because,")
+        print("  The number of columns in the first matrix must be equal to the number of rows in the second matrix.\n  User input is not a matrix.\nSelect '?' in menu to read how to enter a matrix")
     except(SyntaxError):
         print("Syntax Error")
 
@@ -73,7 +75,7 @@ def transpose(mtx):
         matrixTrans = matrix.transpose()
         print("\nMT: \n", matrixTrans)
     except(ValueError):
-        print("ERROR")
+        print("ERROR: User input is not a matrix.\nSelect '?' in menu to read how to enter a matrix")
 
 
 def determinant(mtx):
@@ -85,7 +87,7 @@ def determinant(mtx):
         matrixDet = npy.linalg.det(matrix)
         print("\ndetM: ", matrixDet)
     except(ValueError):
-        print("ERROR")
+        print("ERROR: User input is not a matrix.\nSelect '?' in menu to read how to enter a matrix")
 
 
 def inverse(mtx):
@@ -97,4 +99,6 @@ def inverse(mtx):
         matrixDet = npy.linalg.inv(matrix)
         print("\ninverse(M): \n", matrixDet)
     except(ValueError):
-        print("ERROR")
+        print("ERROR: User input is not a matrix.\nSelect '?' in menu to read how to enter a matrix")
+    except(npy.linalg.LinAlgError):
+        print("ERROR: Matrix should be a square matrix.")

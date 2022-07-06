@@ -63,7 +63,7 @@ def multiply_matrices(mtxA, mtxB):
     except(ValueError):
         print("ERROR!")
         print("Could be because,")
-        print("  The number of columns in the first matrix must be equal to the number of rows in the second matrix.\n  User input is not a matrix.\nSelect '?' in menu to read how to enter a matrix")
+        print("  The number of columns in the first matrix are not equal to the number of rows in the second matrix.\n  User input is not a matrix.\nSelect '?' in menu to read how to enter a matrix")
     except(SyntaxError):
         print("Syntax Error")
 
